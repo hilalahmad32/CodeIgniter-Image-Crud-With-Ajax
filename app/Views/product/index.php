@@ -28,14 +28,8 @@
                     <th>Delete</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>2</td>
-                    <td>title</td>
-                    <td>john@example.com</td>
-                    <td><button class="btn btn-success" data-toggle="modal" data-target="#update-product">Edit</button></td>
-                    <td><button class="btn btn-danger">Delete</button></td>
-                </tr>
+            <tbody id="get-data">
+                
             </tbody>
         </table>
     </div>
@@ -46,20 +40,20 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Modal Heading</h4>
+                    <h4 class="modal-title">Insert Data</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form action="/action_page.php">
+                    <form id='save'>
                         <div class="form-group">
                             <label for="title">Title</label>
-                            <input type="text" class="form-control" placeholder="Enter Title" id="Title">
+                            <input type="text" class="form-control" placeholder="Enter Title" name="title" id="title">
                         </div>
                         <div class="form-group">
                             <label for="file">Image:</label>
-                            <input type="file" class="form-control-file border">
+                            <input type="file" name="file" id="file" class="form-control-file border">
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
@@ -81,23 +75,14 @@
 
                 <!-- Modal Header -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Modal Heading</h4>
+                    <h4 class="modal-title">Update Product</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
 
                 <!-- Modal body -->
                 <div class="modal-body">
-                    <form action="/action_page.php">
-                        <div class="form-group">
-                            <label for="title">Title</label>
-                            <input type="text" class="form-control" placeholder="Enter Title" id="Title">
-                            <input type="text" class="form-control" placeholder="Enter Title" id="id">
-                        </div>
-                        <div class="form-group">
-                            <label for="file">Image:</label>
-                            <input type="file" class="form-control-file border" name="new_image" id="new_image">
-                            <input type="text" class="form-control-file border" name="old_image" id="old_image">
-                        </div>
+                    <form id='update'>
+                       <div id="get-product-form"></div>
                         <button type="submit" class="btn btn-primary">Update</button>
                     </form>
                 </div>
@@ -110,14 +95,18 @@
             </div>
         </div>
     </div>
-    <!-- jQuery library -->
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
 
     <!-- Popper JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script src="action.js"></script>
 </body>
 
 </html>
